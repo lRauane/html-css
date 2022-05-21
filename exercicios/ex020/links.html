@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personalizando links</title>
+    <style>
+/* SELETORES PERSONALIZADOS
+# = id
+. = class
+: = pseudo-class
+:: = pseudo-element
+> = clildren
+*/
+
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    a{
+        font-weight: bold;
+        color: darkred;
+        text-decoration: none;
+    }
+    a:visited{
+        color: khaki;
+    }
+    a:hover{
+        color: rgb(255, 30, 30);
+        text-decoration: underline;
+    }
+    a:active{
+        color: yellow;
+    }
+    .especial{
+        background-color: rgb(207, 118, 118);
+    }
+    .especial::before{
+        content:'⇨';
+    }
+    .especial::after{
+        content:'⇦';
+    }
+   
+
+    </style>
+</head>
+<body>
+    <h1>personalizando links</h1>
+    <ul>
+      <li><a href="https://github.com/gustavoguanabara">Repositório Github</a></li>
+      <li><a href="https://youtube.com/cursoemvideo/" class="especial">Canal do YouTube</a></li>
+      <li><a href="https://www.cursoemvideo.com" class="especial">Sites do Cursoemvideo</a> </li>
+    </ul>
+</body>
+</html>
