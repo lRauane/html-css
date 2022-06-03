@@ -1,12 +1,18 @@
 @charset " UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Nuosu+SIL&family=Poppins:ital,wght@0,700;1,600&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nuosu+SIL&family=Poppins:wght@100;300;400;700&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
 
 :root{
     --fonte1--:'Nuosu SIL', serif;
     --fonte2--:'Tiro Devanagari Marathi', serif;
     --fonte3--:Verdana, Geneva, Tahoma, sans-serif;
     --fonteTitulos--: 'Poppins', sans-serif;
+
+    --cor1--:#BFB6A4;
+    --cor2--:#A67665;
+    --cor3--:#59413C;
+    --cor4--:#D96459;
+    --cor5--:#261514;
 }
 
 *{
@@ -17,20 +23,21 @@
 html, body{
     font-family: var(--fonte3--);
     min-height: 100vh;
-    background-color: darkgray;
 }
 
 header{
     font-family: var(--fonteTitulos--);
-    background-color: black;
-    color: white;
+    background-color: var(--cor1--);
+    color: var(--cor5--);
     text-align: center;
 }
 header > h1{
+    color: #59413C;
     padding-top: 50px;
     font-size: 3.5em;
 }
 header > p {
+    color: #59413C;
     padding-bottom: 50px;
 }
  header a, footer a{
@@ -43,30 +50,67 @@ header > p {
 }
 section{
     font-size: 1.3em;
-    font-family: var(--fonte2--);
+    font-family: var(--fonte4--);
     padding-top: 10vh;
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 30px;
+}
+section > p{
+    padding-bottom: 2em;
 }
 section.normal{
     background-color: white;
     color: black;
 }
 section.imagem{
-    background-color: rgba(0, 0, 0, 0.514);
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 6px 5px 13px 0px rgba(0, 0, 0, 0.377);
+    background-color: var(--cor1--);
     color: white;
 }
 section.imagem > p{
-    background-color: rgba(0, 0, 0, 0.253);
+    padding: 20px;
+    background-color:#26151491;
+    text-shadow: 1px 1px 0px black;
     width: 400px;
 }
-
-footer{
-    font-size: 1.0rem;
+section#img01{
+    background-image: url(../imagens/background001.jpg);
+    background-position: right center;
+    
+}
+section#img02{
+    background-image: url(../imagens/background004.jpg);
+ 
+}
+section.redesSociais{
     font-family: var(--fonteTitulos--);
-    background-color: black;
-    color: white;
+    margin: 20px;
+    border-radius: 2px;
+    padding: 20px;
     text-align: center;
-    padding: 30px;
+    background-color: var(--cor1--);
+}
+section.redesSociais li{
+    list-style: none;
+}
+section.redesSociais a{
+    text-decoration: none;
+    color: black;
+}
+section.redesSociais a:hover{
+    color: var(--cor5--);
+}
+footer{
+    font-size: 0.9rem;
+    font-family: var(--fonteTitulos--);
+    background-color: var(--cor1--);
+    color: var(--cor5--);
+    text-align: center;
+    padding: 10px;
+}
+footer a:hover{
+    color: var(--cor5--);
 }
