@@ -17,6 +17,13 @@
             border: 1px solid black;
             padding: 10px;
         }
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+            border: 1px solid rgb(66, 66, 66);
+        }
         td{
             background-color: #F8F9FA;
         }
@@ -25,7 +32,7 @@
             color: black;
         }
         .porcent{
-            color: #008081;
+            color: #3e8100;
         }
         .btn{
             background-color: #EAECF0;
@@ -36,6 +43,7 @@
     <h1>Uso de tabelas grandes</h1>
     <!--
         ANATOMIA DA TABELA
+        CAPTION
         TABLE
         THEAD
            TR, TD, TH
@@ -45,11 +53,12 @@
             TR, TD, TH
     -->
     <table>
+        <caption>População das unidades federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
-                <th>Mudança</th>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
+                <th scope="row">Mudança</th>
             </tr>
         </thead>
         <tbody>
@@ -128,7 +137,7 @@
         <tfoot>
             <tr>
                 <th>Total de Habitantes</th>
-                <td colspan="2" class="btn"><strong>212,6 milhões</strong></td>
+                <td colspan="2" class="btn" scope="row"><strong>212,6 milhões</strong></td>
             </tr>
         </tfoot>
     </table>
